@@ -1,0 +1,55 @@
+package choiceComponent;
+
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JRadioButtonMenuItem;
+
+public class MenuDemo extends JFrame {
+	JMenuBar bar;
+	JMenu file, edit;
+	JMenuItem open, save, exit, copy, paste;
+	JCheckBoxMenuItem status;
+	JRadioButtonMenuItem online;
+
+	public MenuDemo() {
+		super("Menu Frame");
+		setBounds(1000, 350, 250, 250);
+		bar = new JMenuBar();
+		// mENU
+		file = new JMenu("FILE");
+		edit = new JMenu("EDIT");
+		bar.add(file);
+		bar.add(edit);
+
+		// MENUITEM
+		open = new JMenuItem("Open");
+		save = new JMenuItem("Save");
+		exit = new JMenuItem("Exit");
+		file.add(open);
+		file.add(save);
+		file.add(exit);
+
+		copy = new JMenuItem("Copy");
+		paste = new JMenuItem("Paste");
+		edit.add(copy);
+		edit.add(paste);
+		// check menuitem\
+		status = new JCheckBoxMenuItem("Status", true);
+		edit.add(status);
+		file.add(status);
+		online = new JRadioButtonMenuItem("Online");
+		edit.add(online);
+		setJMenuBar(bar);
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new MenuDemo();
+	}
+
+}

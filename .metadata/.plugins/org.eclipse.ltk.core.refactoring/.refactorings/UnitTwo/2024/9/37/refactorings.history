@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;advanceSwingComponent.JProgressBar&apos; to &apos;JProgressBarDemo&apos;&#x0D;&#x0A;- Original project: &apos;UnitTwo&apos;&#x0D;&#x0A;- Original element: &apos;advanceSwingComponent.JProgressBar&apos;&#x0D;&#x0A;- Renamed element: &apos;advanceSwingComponent.JProgressBarDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JProgressBar&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;advanceSwingComponent{JProgressBar.java[JProgressBar" matchStrategy="1" name="JProgressBarDemo" qualified="false" references="true" similarDeclarations="false" stamp="1725898708042" textual="false" version="1.0"/>
+</session>

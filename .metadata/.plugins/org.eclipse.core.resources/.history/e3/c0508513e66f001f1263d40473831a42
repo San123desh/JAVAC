@@ -1,0 +1,21 @@
+package eventHandler;
+
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class HandlingKeyEvent extends JFrame implements KeyListener{
+	
+	JLabel
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

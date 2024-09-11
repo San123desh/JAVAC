@@ -1,0 +1,43 @@
+package project;
+
+import java.awt.Color;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class BorderImplement extends JFrame{
+	
+	public BorderImplement() {
+        // Set the title of the frame
+        setTitle("Simple Border Example");
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the size of the frame
+        setSize(400, 300);
+
+        // Create a panel with a line border
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createLineBorder(Color.black));
+        panel.add(new JLabel("Line Border"));
+
+        // Add the panel to the frame
+        add(panel);
+
+        // Set the frame visibility to true
+        setVisible(true);
+    }
+
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new BorderImplement();
+	}
+
+}

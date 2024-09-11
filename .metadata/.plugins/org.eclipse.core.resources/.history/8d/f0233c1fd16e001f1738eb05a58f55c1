@@ -1,0 +1,63 @@
+package project;
+
+
+
+
+
+
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTable;
+import javax.swing.JTree;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+
+public class JTree_JTable {
+    public static void main(String[] args) {
+        // Create the frame
+        JFrame frame = new JFrame("JTree and JTable Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600, 400);
+        
+        // Create the root node for the JTree
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Root");
+        DefaultMutableTreeNode parent1 = new DefaultMutableTreeNode("Parent 1");
+        DefaultMutableTreeNode parent2 = new DefaultMutableTreeNode("Parent 2");
+        root.add(parent1);
+        root.add(parent2);
+        parent1.add(new DefaultMutableTreeNode("Child 1.1"));
+        parent1.add(new DefaultMutableTreeNode("Child 1.2"));
+        parent2.add(new DefaultMutableTreeNode("Child 2.1"));
+        parent2.add(new DefaultMutableTreeNode("Child 2.2"));
+        
+        // Create the JTree
+        JTree tree = new JTree(root);
+        JScrollPane treeScrollPane = new JScrollPane(tree);
+        
+        // Create the JTable
+        String[] columnNames = {"Column 1", "Column 2"};
+        Object[][] data = {
+            {"Data 1.1", "Data 1.2"},
+            {"Data 2.1", "Data 2.2"},
+            {"Data 3.1", "Data 3.2"},
+            {"Data 4.1", "Data 4.2"}
+        };
+        DefaultTableModel tableModel = new DefaultTableModel(data, columnNames);
+        JTable table = new JTable(tableModel);
+        JScrollPane tableScrollPane = new JScrollPane(table);
+        
+        // Create a split pane to hold both the JTree and JTable
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, treeScrollPane, tableScrollPane);
+        splitPane.setDividerLocation(200);
+        
+        // Add the split pane to the frame
+        frame.add(splitPane);
+        
+        // Display the frame
+        frame.setVisible(true);
+    }
+}
+

@@ -1,0 +1,18 @@
+package eventHandler;
+
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+
+public class HandlingKeyEvent extends JFrame implements KeyListener{
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

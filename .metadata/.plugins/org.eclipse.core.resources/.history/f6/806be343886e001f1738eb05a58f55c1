@@ -1,0 +1,49 @@
+package choiceComponent;
+
+import  javax.swing.Action;
+import javax.swing.AbstractAction;
+import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JToolBar;
+
+public class ToolBarDemo extends JFrame{
+	JToolBar tbar;
+	JPanel panel;
+	
+	public ToolBarDemo() {
+		setTitle("Toolbar Frarme");
+		setSize(300,300);
+		panel = new JPanel();
+		Action runaction = new AbstractAction("Color", new ImageIcon(getClass().getResource("run.PNG"))) { 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panel.setBackground(Color.GREEN);
+			}
+		};
+		
+		Action openaction = new AbstractAction("Open", new ImageIcon(getClass().getResource("bug.PNG"))) { 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new JFileChooser().showOpenDialog(panel);
+			}
+		};
+		add(panel);//added JFrame
+		tbar = new JToolBar();
+		tbar.add(runaction);
+		tbar.add(openaction);
+		add(tbar, BorderLayout.NORTH);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);	
+	}
+
+	public static void main(String[] args) {
+		new ToolBarDemo();
+	}
+
+}

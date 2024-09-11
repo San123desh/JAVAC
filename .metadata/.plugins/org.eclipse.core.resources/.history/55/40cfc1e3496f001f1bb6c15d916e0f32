@@ -1,0 +1,52 @@
+package choiceComponent;
+
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JRadioButtonMenuItem;
+
+public class MenuDemo extends JFrame {
+	JMenuBar bar;
+	JMenu bike, car;
+	JMenuItem cfmoto, xpulse, toyota, hondacivic;
+	JCheckBoxMenuItem status;
+//	JRadioButtonMenuItem online;
+
+	public MenuDemo() {
+		super("Menu Frame");
+		setBounds(1000, 350, 250, 250);
+		bar = new JMenuBar();
+		// mENU
+		bike = new JMenu("FILE");
+		car = new JMenu("EDIT");
+		bar.add(bike);
+		bar.add(car);
+
+		// MENUITEM
+		cfmoto = new JMenuItem("Open");
+		xpulse = new JMenuItem("Save");
+		toyota = new JMenuItem("Exit");
+		hondacivic = new JMenuItem("Copy");
+		bike.add(cfmoto);
+		bike.add(xpulse);
+		car.add(toyota);
+		car.add(hondacivic);
+		
+		// check menuitem\
+		status = new JCheckBoxMenuItem("Status", true);
+		car.add(status);
+//		online = new JRadioButtonMenuItem("Online");
+//		car.add(online);
+		setJMenuBar(bar);
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new MenuDemo();
+	}
+
+}
