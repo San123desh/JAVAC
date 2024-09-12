@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class SwingDemo {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Swing Example"); // Creating a frame
-        JButton button = new JButton("Click Me!"); // Creating a button
+        JFrame frame = new JFrame("Swing Example"); 
+        JButton button = new JButton("Click Me!"); 
         
         // Setting the button's location and size
         button.setBounds(50, 100, 100, 30);
