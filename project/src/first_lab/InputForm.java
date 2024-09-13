@@ -1,15 +1,24 @@
 package first_lab;
 
-import javax.swing.*;
-import java.awt.*;
+
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 public class InputForm extends JFrame {
-    private JTextField nameField;
-    private JPasswordField passwordField;
-    private JTextArea displayArea;
-    private JButton submitButton;
+    JTextField nameField;
+    JPasswordField passwordField;
+    JTextArea displayArea;
+    JButton submitButton;
 
     public InputForm() {
         // Set up the JFrame

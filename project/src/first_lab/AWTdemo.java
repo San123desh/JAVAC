@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class AWTdemo {
     public static void main(String[] args) {
-        Frame frame = new Frame("AWT Example"); // Creating a frame
+        Frame frame = new Frame("AWT "); // Creating a frame
         Button button = new Button("Click Me!"); // Creating a button
         
         // Setting the button's location and size

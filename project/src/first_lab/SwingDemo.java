@@ -1,10 +1,12 @@
 package first_lab;
 
-import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class SwingDemo {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Swing Example"); 
+        JFrame frame = new JFrame("Swing "); 
         JButton button = new JButton("Click Me!"); 
         
         // Setting the button's location and size

@@ -10,16 +10,16 @@ import java.io.Serializable;
 class Student implements Serializable{
 	private String name;
 	private int age;
-	private String gender;
 	
-	public Student(String name, int age, String gender){
+	
+	public Student(String name, int age){
 		this.name = name;
 		this.age = age;
-		this.gender = gender;
+		
 	}
 	
 	public String toString() {
-		return "Name: " + name + " Age: " + age + " Gender: " + gender ;
+		return "Name: " + name + " Age: " + age ;
 
 	}
 }
@@ -28,8 +28,8 @@ class Student implements Serializable{
 public class Serialization {
 
 	public static void main(String[] args) {
-		Student s1 = new Student("Ram", 22,"Male");
-		Student s2 = new Student("Hari", 24, "Male");
+		Student s1 = new Student("Ram", 22);
+		Student s2 = new Student("Hari", 24);
 		
 		File file = new File("student.txt");
 		try {

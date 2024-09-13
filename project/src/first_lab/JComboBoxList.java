@@ -8,9 +8,9 @@ import java.awt.event.ActionListener;
 public class JComboBoxList {
     public static void main(String[] args) {
         // Create the JFrame
-        JFrame frame = new JFrame("JComboBox and JList Example");
+        JFrame frame = new JFrame("JComboBox and JList");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(300, 200);
         frame.setLayout(new FlowLayout());
 
         // Data for JComboBox and JList
