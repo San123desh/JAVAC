@@ -1,4 +1,4 @@
-package project;
+package second_lab;
 
 import java.awt.Color;
 import java.awt.Component;

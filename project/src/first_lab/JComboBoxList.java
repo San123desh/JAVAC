@@ -1,9 +1,17 @@
 package first_lab;
 
-import javax.swing.*;
-import java.awt.*;
+
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.ListSelectionModel;
 
 public class JComboBoxList {
     public static void main(String[] args) {
@@ -14,7 +22,7 @@ public class JComboBoxList {
         frame.setLayout(new FlowLayout());
 
         // Data for JComboBox and JList
-        String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
+        String[] items = {"Item 1", "Item 2", "450mt", " CRF 300"};
 
         // Create JComboBox and JList
         JComboBox<String> comboBox = new JComboBox<>(items);
