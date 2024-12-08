@@ -3,7 +3,11 @@ package first_lab;
 class MyNepse{
     private int shares = 90;
 
+<<<<<<< HEAD
     
+=======
+    // Synchronized method for buying shares
+>>>>>>> c25d6a36afef5bfc390c251f9508f35568e59bc1
     public void buyShares(int amount) {
     	synchronized(this) {
     		

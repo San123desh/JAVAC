@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
 org.eclipse.debug.ui.save_dirty_editors_before_launch=never
 preferredTargets=default\:default|default,org.eclipse.lsp4e.debug.toggleBreakpointTarget,org.eclipse.wst.jsdt.chromium.debug.ui.toggleTargetId\:default|default,org.eclipse.lsp4e.debug.toggleBreakpointTarget\:default|org.eclipse.lsp4e.debug.toggleBreakpointTarget\:org.eclipse.lsp4e.debug.toggleBreakpointTarget|
+=======
+Console.highWaterMark=88000
+Console.limitConsoleOutput=false
+eclipse.preferences.version=1
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+preferredTargets=default\:default|
+>>>>>>> c25d6a36afef5bfc390c251f9508f35568e59bc1

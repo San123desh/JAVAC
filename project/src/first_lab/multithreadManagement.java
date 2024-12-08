@@ -1,5 +1,17 @@
 package first_lab;
 
+<<<<<<< HEAD
+=======
+//public class multithreadManagement {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//}
+
+>>>>>>> c25d6a36afef5bfc390c251f9508f35568e59bc1
 
 class MyThread extends Thread {
     final Object lock;
