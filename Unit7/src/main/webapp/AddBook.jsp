@@ -1,0 +1,43 @@
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <%@ page import="databaseCon.Database" %>
+    <%@ page import="java.sql.*" %>
+    <%! Connection con; Statement st; ResultSet set; %>
+    <%
+    String title = request.getParameter("title");
+    String price = request.getParameter("price");
+    String author = request.getParameter("author");
+    String publication = request.getParameter("publication");
+    con = new Database().getCon();
+    st = con.createStatement();
+    String insert = "Insert into book_tbl values('" + title + " ','" + price + "','" + author + "','" + publication + "')";
+    st.executeUpdate(insert);
+    set = st.executeQuery("Select * from book_tbl;");
+    %>
+
+    <table border="2px">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Author</th>
+            <th>Publication</th>
+        </tr>
+        <% while (set.next()) { %>
+        <tr>
+            <td><%= set.getString("title") %></td>
+            <td><%= set.getString("price") %></td>
+            <td><%= set.getString("author") %></td>
+            <td><%= set.getString("publication") %></td>
+        </tr>
+        <% } %>
+    </table>
+
+</body>
+</html>
+--%>

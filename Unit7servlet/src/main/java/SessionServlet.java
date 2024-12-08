@@ -1,0 +1,29 @@
+
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+
+/**
+ * Servlet implementation class SessionServlet
+ */
+@WebServlet("/SessionServlet")
+public class SessionServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Create or retrieve an existing session
+        HttpSession session = request.getSession();
+
+        // Set an attribute in the session
+        session.setAttribute("username", "SandeshShrestha");
+
+        // Forward to JSP page to display session data
+        request.getRequestDispatcher("session.jsp").forward(request, response);
+    }
+}

@@ -1,0 +1,34 @@
+package com.sandesh.clientMain;
+
+import java.rmi.AccessException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import com.sandesh.remote.Message;
+
+public class ClientMain {
+	private void doTest() throws AccessException, RemoteException, NotBoundException{
+		try {
+			// fire to localhost port 1099
+			Registry myRegistry = LocateRegistry.getRegistry("127.0.0.1", 1099);
+			// search for myMessage service in the registry
+			// gets remote object i.e. instance of MessageImpl
+			Message impl = (Message) myRegistry.lookup("myMessage");
+			// call server's method
+			String s = impl.sayName("Sandesh Shrestha");
+			double d = impl.findFactorial(11);
+			System.out.println("Message Sent and Response Received");
+			System.out.println(s + "\n" + d);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+	public static void main(String[] args) throws AccessException, RemoteException, NotBoundException{
+		new ClientMain().doTest();
+	}
+
+}

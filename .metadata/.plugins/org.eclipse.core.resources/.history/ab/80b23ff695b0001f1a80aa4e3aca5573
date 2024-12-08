@@ -1,0 +1,22 @@
+<%@ page import="javax.servlet.http.Cookie" %>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Cookies</title>
+</head>
+<body>
+    <h2>Cookies:</h2>
+    <%
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                out.println("Name: " + cookie.getName() + ", Value: " + cookie.getValue() + "<br>");
+            }
+        }else{
+            out.println("No cookies found.");
+        }
+    %>
+</body>
+</html>

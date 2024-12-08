@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Session Handling</title>
+</head>
+<body>
+	<h1>Session Handling Example</h1>
+	<%
+	// Retrieve the session object
+	HttpSession mysession = request.getSession(false);
+
+	if (session != null) {
+		// Get the session attribute
+		String username = (String) session.getAttribute("username");
+
+		if (username != null) {
+			out.println("<p>Welcome, " + username + "!</p>");
+			out.println("<p>Session ID: " + session.getId() + "</p>");
+		} else {
+			out.println("<p>No username found in session.</p>");
+		}
+	} else {
+		out.println("<p>No session exists!</p>");
+	}
+	%>
+</body>
+</html>
